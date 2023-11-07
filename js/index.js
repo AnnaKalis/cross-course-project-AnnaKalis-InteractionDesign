@@ -12,7 +12,7 @@ async function getProducts() {
     try {
         const response = await fetch(url);
         const results = await response.json();
-        console.log(results);
+        // console.log(results);
       
         const products = results;
         productsContainer.innerHTML = "";
@@ -25,10 +25,11 @@ async function getProducts() {
       
         }
     } catch (error) {
-        console.log(error)
-        productsContainer.innerHTML = "There was an error with uploading the products from the server!"
+        console.log("There is an error", error);
+        productsContainer.innerHTML = displayError("An error occured when uploading the products from the server!");
+        // // 
     }
  
-}
+};
 
 getProducts();

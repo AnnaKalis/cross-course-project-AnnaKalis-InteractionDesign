@@ -32,6 +32,10 @@ ul {
     list-style-type: none;
 }
 
+.error{
+    color: darkred;
+}
+
 .price {
     font-weight: bold;
  }
