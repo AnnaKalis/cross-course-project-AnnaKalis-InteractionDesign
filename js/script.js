@@ -7,15 +7,17 @@ const backToTop = document.querySelector(".back-to-top");
 const productsContainer = document.createElement("div");
 productsContainer.classList.add("products");
 mainAllJacketsPage.insertBefore(productsContainer, backToTop);
+productsContainer.innerHTML = `<div class="loader"></div>`
 
 async function getProducts() {
   try {
+    
     const response = await fetch(url);
 
-    if (!response.ok){
-        throw new Error(`Network response was not ok (status: ${response.status})`);
-      }
-  
+    if (!response.ok) {
+      throw new Error(`Network response was not ok (status: ${response.status})`);
+    }
+
     const results = await response.json();
     console.log(results);
 

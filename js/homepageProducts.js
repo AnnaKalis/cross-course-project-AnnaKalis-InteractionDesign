@@ -7,6 +7,7 @@ const featured = document.querySelector(".featured");
 const homepageProductsContainer = document.createElement("div");
 homepageProductsContainer.classList.add("products");
 featured.append(homepageProductsContainer);
+homepageProductsContainer.innerHTML = `<div class="loader"></div>`;
 
 async function getProducts() {
   try {

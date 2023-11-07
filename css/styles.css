@@ -167,6 +167,21 @@ footer div {
   padding-left: 40px;
 }
 
+.loader {
+  margin: auto;
+  border: 40px solid var(--white-gray);
+  border-radius: 50%;
+  border-top: 40px solid var(--blue-green);
+  width: 50px;
+  height: 50px;
+  animation: spinner 3s linear infinite;
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 /* Styling of homepage
 -------------------------------------------------------------------*/
 

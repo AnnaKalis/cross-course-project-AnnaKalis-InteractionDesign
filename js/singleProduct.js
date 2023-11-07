@@ -6,6 +6,7 @@ const params = new URLSearchParams(queryString);
 console.log(params);
 
 const productContainer = document.querySelector(".product-page");
+productContainer.innerHTML = `<div class="loader"></div>`;
 
 const id = params.get("id");
 console.log(id);
@@ -23,6 +24,7 @@ async function getProduct() {
 
     const result = await response.json();
     console.log(result);
+    productContainer.innerHTML = "";
 
     productContainer.innerHTML += `<img src="${result.image}" alt="${result.title}" />
             <section class="product-page-content">
