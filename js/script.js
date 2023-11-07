@@ -21,7 +21,7 @@ async function getProducts() {
           productsContainer.innerHTML += `<a href="../products/singleProduct.html?id=${products[i].id}" class="product">
           <img src="${products[i].image}" alt="${products[i].title}" class="product-image" />
           <p class="product-name">${products[i].title}</p>
-          <p class="price">${products[i].price} NOK</p>
+          <p class="price">${products[i].price} EUR</p>
           </a>`;
       
         }
