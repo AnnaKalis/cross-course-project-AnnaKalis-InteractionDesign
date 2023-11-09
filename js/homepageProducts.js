@@ -1,4 +1,4 @@
-import { displayError } from "./components/displayError.js";
+import { displayError } from "./components/displayerror.js";
 
 const url = "https://api.noroff.dev/api/v1/rainy-days";
 
@@ -29,7 +29,7 @@ async function getProducts() {
       }
 
       homepageProductsContainer.innerHTML += `
-          <a href="../products/singleProduct.html?id=${products[i].id}" class="product">
+          <a href="../products/singleproduct.html?id=${products[i].id}" class="product">
           <img src="${products[i].image}" alt="${products[i].title}" class="product-image" />
           <p class="product-name">${products[i].title}</p>
           <p class="price">${products[i].price} EUR</p>

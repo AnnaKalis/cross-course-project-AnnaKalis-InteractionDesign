@@ -1,4 +1,4 @@
-import { displayError } from "./components/displayError.js";
+import { displayError } from "./components/displayerror.js";
 
 const queryString = document.location.search;
 console.log(queryString);
@@ -18,7 +18,7 @@ async function getProduct() {
   try {
     const response = await fetch(url);
 
-    if (!response.ok){
+    if (!response.ok) {
       throw new Error(`Network response was not ok (status: ${response.status})`);
     }
 
@@ -53,5 +53,3 @@ async function getProduct() {
 }
 
 getProduct();
-
-
