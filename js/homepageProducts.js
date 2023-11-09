@@ -18,7 +18,6 @@ async function getProducts() {
     }
 
     const results = await response.json();
-    console.log(results);
 
     const products = results;
     homepageProductsContainer.innerHTML = "";
@@ -36,7 +35,6 @@ async function getProducts() {
           </a>`;
     }
   } catch (error) {
-    console.log("An error occured: ", error);
     homepageProductsContainer.innerHTML = displayError(
       "An error occured when uploading the products from the server!"
     );

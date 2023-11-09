@@ -1,18 +1,14 @@
 import { displayError } from "./components/displayerror.js";
 
 const queryString = document.location.search;
-console.log(queryString);
 const params = new URLSearchParams(queryString);
-console.log(params);
 
 const productContainer = document.querySelector(".product-page");
 productContainer.innerHTML = `<div class="loader"></div>`;
 
 const id = params.get("id");
-console.log(id);
 
 const url = "https://api.noroff.dev/api/v1/rainy-days/" + id;
-console.log(url);
 
 async function getProduct() {
   try {
@@ -23,7 +19,6 @@ async function getProduct() {
     }
 
     const result = await response.json();
-    console.log(result);
     productContainer.innerHTML = "";
 
     productContainer.innerHTML += `<img src="${result.image}" alt="${result.title}" />
@@ -47,7 +42,6 @@ async function getProduct() {
               <a href="../checkout.html" class="cta">Add to cart</a>
             </section>`;
   } catch (error) {
-    console.log("An error occured: ", error);
     productContainer.innerHTML = displayError("An error occured when uploading the product from the server!");
   }
 }
