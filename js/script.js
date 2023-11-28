@@ -29,6 +29,8 @@ async function getProducts() {
           <p class="price">${products[i].price} EUR</p>
           </a>`;
     }
+
+    
   } catch (error) {
     productsContainer.innerHTML = displayError(
       "An error occured when uploading the products from the server!"
