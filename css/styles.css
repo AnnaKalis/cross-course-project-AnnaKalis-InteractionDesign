@@ -4,6 +4,7 @@
   --black-blue: #0a0d0c;
   --blue-green: #293940;
   --white-gray: #f5f5f5;
+  --white-dark-grey: #EBEBEB;
   --white: #fff;
   --green: #048C4D;
 }
@@ -244,7 +245,7 @@ footer div {
   bottom: 100px;
   right: 100px;
   padding: 15px 80px;
-  font-weight: 800;
+
 }
 
 .welcome-womens {
@@ -795,6 +796,7 @@ footer div {
 
   header {
     grid-template-columns: repeat(2, auto);
+    background-color: var(--white-dark-grey);
   }
 
   .logo-header {
