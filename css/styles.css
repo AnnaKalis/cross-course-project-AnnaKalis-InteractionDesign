@@ -464,7 +464,7 @@ footer div {
 .follow p {
   justify-self: center;
 }
-.social-media img {
+.social-media a {
   display: inline-block;
   text-align: center;
   padding: 10px;
