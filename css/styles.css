@@ -5,6 +5,7 @@
   --blue-green: #293940;
   --white-gray: #f5f5f5;
   --white: #fff;
+  --green: #048C4D;
 }
 
 body {
@@ -483,6 +484,10 @@ footer div {
   display: block;
   padding: 30px 10px;
   margin: 300px 0;
+}
+
+.checkout-succesfull-header {
+  color: var(--green);
 }
 
 /* Styling of checkout page
