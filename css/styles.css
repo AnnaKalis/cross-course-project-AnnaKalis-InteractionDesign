@@ -39,6 +39,11 @@ ul {
 
 .price {
   font-weight: bold;
+  margin-top: 0px;
+}
+
+.product-name {
+  margin-bottom: 3px;
 }
 
 h1 {
