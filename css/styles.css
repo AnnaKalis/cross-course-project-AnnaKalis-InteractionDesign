@@ -337,6 +337,7 @@ footer div {
 }
 
 .product-page img {
+  grid-row: 1/3;
   background-color: var(--white);
   padding: 3rem;
   width: 70%;
@@ -359,6 +360,10 @@ footer div {
 .size select {
   margin-left: 10px;
   font-size: 1.05rem;
+}
+
+.add-to-cart-button{
+  grid-row: 2/3;
 }
 
 /* Styling of about us page

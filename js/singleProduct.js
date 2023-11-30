@@ -4,6 +4,9 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 
 const productContainer = document.querySelector(".product-page");
+const addToCartButton = document.createElement("button");
+addToCartButton.classList.add("cta");
+addToCartButton.innerText = "Add to cart";
 productContainer.innerHTML = `<div class="loader"></div>`;
 
 const id = params.get("id");
@@ -39,8 +42,8 @@ async function getProduct() {
                   <option>${result.sizes[5]}</option>
                 </select>
               </form>
-              <a href="../checkout.html" class="cta">Add to cart</a>
-            </section>`;
+            </section>`
+            productContainer.appendChild(addToCartButton);
   } catch (error) {
     productContainer.innerHTML = displayError("An error occured when uploading the product from the server!");
   }
