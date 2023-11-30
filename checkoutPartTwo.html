@@ -54,7 +54,7 @@
       <h1>Checkout</h1>
       <section class="checkout">
         <div class="cart">
-          <h2>Shopping cart</h2>
+          <!-- <h2>Shopping cart</h2>
           <div class="cart-single-product">
             <img src="images/products/stavanger.PNG" alt="Grey wind jacket" />
             <p>Stavanger jacket</p>
@@ -91,9 +91,9 @@
             <p class="price price-shopping-cart">55,00 EUR</p>
             <img src="images/icons/Trash.svg" alt="Remove product from shopping cart" class="trash" />
           </div>
-        </div>
+        </div> -->
 
-        <form method="get" class="shipping">
+        <form method="get" action="checkoutPartTwo.html" class="shipping">
           <h2>Shipping adress</h2>
           <div class="shipping-fields">
             <div>
@@ -116,7 +116,7 @@
               <label for="city">City</label>
               <input type="text" name="city" id="city" required/>
             </div>
-            <input type="submit" />
+            <input type="submit" value="Go to payment" class="cta" />
           </div>
         </form>
 
@@ -141,11 +141,12 @@
               <input type="radio" name="payment" id="payu" value="payu" />
               <label for="payu" class="payu"><img src="images/icons/PayU.png" alt="PayU" /></label>
             </div>
+            
           </div>
         </form>
 
         <a href="jackets.html" class="cta">Continue shopping</a>
-        <a href="checkoutPartTwo.html" class="cta">Buy now</a>
+        
       </section>
 
       <a href="#" class="back-to-top"
