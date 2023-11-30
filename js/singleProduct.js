@@ -42,11 +42,29 @@ async function getProduct() {
                   <option>${result.sizes[5]}</option>
                 </select>
               </form>
-            </section>`
-            productContainer.appendChild(addToCartButton);
+            </section>`;
+    productContainer.appendChild(addToCartButton);
   } catch (error) {
     productContainer.innerHTML = displayError("An error occured when uploading the product from the server!");
   }
 }
 
 getProduct();
+
+addToCartButton.addEventListener("click", () => {
+  numberOfCartItems();
+});
+
+function numberOfCartItems() {
+  let numberOfProducts = localStorage.getItem("numberOfCartItems");
+
+  numberOfProducts = parseInt(numberOfProducts);
+
+  if (numberOfProducts) {
+    localStorage.setItem("numberOfCartItems", numberOfProducts + 1);
+    document.querySelector(".cart-span").textContent = numberOfProducts + 1;
+  } else {
+    localStorage.setItem("numberOfCartItems", 1)
+    document.querySelector(".cart-span").textContent = 1;
+  }
+}

@@ -366,6 +366,24 @@ footer div {
   grid-row: 2/3;
 }
 
+.cart-link {
+  position:relative;
+}
+.cart-span {
+  background-color: var(--black-blue);
+  font-size: small;
+  font-weight: 400;
+  color: var(--white);
+  height:18px;
+  width:18px;
+  padding:5px;
+  text-align: center;
+  position:absolute;
+  left: 50%;
+  top:45%;
+  border-radius: 50%;
+}
+
 /* Styling of about us page
 -------------------------------------------------------------------*/
 .about-up,
