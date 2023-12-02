@@ -44,6 +44,36 @@ async function getProduct() {
               </form>
             </section>`;
     productContainer.appendChild(addToCartButton);
+
+    addToCartButton.addEventListener("click", () => {
+      numberOfCartItems(result);
+    });
+
+    function numberOnLoad() {
+      let numberOfProducts = localStorage.getItem("numberOfCartItems");
+
+      if (numberOfProducts) {
+        document.querySelector(".cart-span").textContent = numberOfProducts;
+      }
+    }
+
+    function numberOfCartItems(result) {
+      let numberOfProducts = localStorage.getItem("numberOfCartItems");
+
+      numberOfProducts = parseInt(numberOfProducts);
+
+      if (numberOfProducts) {
+        localStorage.setItem("numberOfCartItems", numberOfProducts + 1);
+        document.querySelector(".cart-span").textContent = numberOfProducts + 1;
+      } else {
+        localStorage.setItem("numberOfCartItems", 1);
+        document.querySelector(".cart-span").textContent = 1;
+      }
+
+      setItems(result);
+    }
+
+    numberOnLoad();
   } catch (error) {
     productContainer.innerHTML = displayError("An error occured when uploading the product from the server!");
   }
@@ -51,20 +81,25 @@ async function getProduct() {
 
 getProduct();
 
-addToCartButton.addEventListener("click", () => {
-  numberOfCartItems();
-});
+function setItems(result) {
+  let cartItems = localStorage.getItem("productsInCart");
+  cartItems = JSON.parse(cartItems);
 
-function numberOfCartItems() {
-  let numberOfProducts = localStorage.getItem("numberOfCartItems");
-
-  numberOfProducts = parseInt(numberOfProducts);
-
-  if (numberOfProducts) {
-    localStorage.setItem("numberOfCartItems", numberOfProducts + 1);
-    document.querySelector(".cart-span").textContent = numberOfProducts + 1;
+  if (cartItems != null) {
+    if (cartItems[result.id] == undefined) {
+      result.inCart = 0;
+      cartItems = {
+        ...cartItems,
+        [result.id]: result,
+      };
+    }
+    cartItems[result.id].inCart += 1;
   } else {
-    localStorage.setItem("numberOfCartItems", 1)
-    document.querySelector(".cart-span").textContent = 1;
+    result.inCart = 1;
+    cartItems = {
+      [result.id]: result,
+    };
   }
+
+  localStorage.setItem("productsInCart", JSON.stringify(cartItems));
 }
