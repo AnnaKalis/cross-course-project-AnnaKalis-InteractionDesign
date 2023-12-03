@@ -47,6 +47,7 @@ async function getProduct() {
 
     addToCartButton.addEventListener("click", () => {
       numberOfCartItems(result);
+      totalCost(result);
     });
 
     function numberOnLoad() {
@@ -102,4 +103,15 @@ function setItems(result) {
   }
 
   localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+}
+
+function totalCost(results) {
+  let cartCost = localStorage.getItem("totalCost");
+
+  if (cartCost !== null) {
+    cartCost = parseInt(cartCost);
+    localStorage.setItem("totalCost", cartCost + results.price);
+  } else {
+    localStorage.setItem("totalCost", results.price);
+  }
 }
