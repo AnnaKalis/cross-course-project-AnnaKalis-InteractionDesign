@@ -29,9 +29,12 @@ async function getProducts() {
 
       homepageProductsContainer.innerHTML += `
           <a href="../products/singleproduct.html?id=${products[i].id}" class="product">
-          <img src="${products[i].image}" alt="${products[i].title}" class="product-image" />
-          <p class="product-name">${products[i].title}</p>
-          <p class="price">${products[i].price} EUR</p>
+          <div class="product-card">
+            <img src="${products[i].image}" alt="${products[i].title}" class="product-image" />
+            <p class="product-name">${products[i].title}</p>
+            <p class="price">${products[i].price} EUR</p>
+            <p class="gender-tag">${products[i].gender}</p>
+          </div>
           </a>`;
     }
   } catch (error) {
