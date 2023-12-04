@@ -42,6 +42,7 @@ async function getProduct() {
                   <option>${result.sizes[5]}</option>
                 </select>
               </form>
+              <a href="../images/pictures/size-chart.png" class="size-chart">Size chart</a>
             </section>`;
     productContainer.appendChild(addToCartButton);
 
