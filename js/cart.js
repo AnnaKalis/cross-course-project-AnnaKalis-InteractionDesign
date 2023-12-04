@@ -21,9 +21,9 @@ function displayCart() {
     });
 
     productContainer.innerHTML += `
-    <div>
-        <h4> Total: </h4>
-        <h4> ${cartCost} </h4>
+    <div class="total-price">
+        <h4>Total:</h4>
+        <h4> ${cartCost} EUR</h4>
     </div>`;
   }
 }

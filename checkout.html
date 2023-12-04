@@ -66,61 +66,62 @@
          
         </div>
 
-        <form method="get" class="shipping">
-          <h2>Shipping adress</h2>
+        <form method="get"  action="checkoutsuccesfull.html" class="shipping">
+          <h2>Shipping adress and Payment method</h2>
           <div class="shipping-fields">
             <div>
-              <label for="name">Name</label>
+              <label for="name">Name *</label>
               <input type="text" name="name" id="name" required />
             </div>
             <div>
-              <label for="email">Email</label>
+              <label for="email">Email *</label>
               <input type="email" name="email" id="email" required />
             </div>
             <div class="shipping-fields-adress">
-              <label for="adress">Street adress</label>
+              <label for="adress">Street adress *</label>
               <input type="text" name="adress" id="adress" required />
             </div>
             <div>
-              <label for="post_code">Post code</label>
+              <label for="post_code">Post code *</label>
               <input type="text" name="post_code" id="post_code" required/>
             </div>
             <div>
-              <label for="city">City</label>
+              <label for="city">City *</label>
               <input type="text" name="city" id="city" required/>
             </div>
-            <input type="submit" />
+            <div class="shipping-fields-country">
+              <label for="country">Country *</label>
+              <input type="text" name="country" id="country" required/>
+            </div>
+            <p>Choose a payment method *</p>
+            <div class="payment-method">
+              <div>
+                <input type="radio" name="payment" id="visa" value="visa" />
+                <label for="visa" class="visa"><img src="images/icons/Visa.png" alt="Visa" /></label>
+              </div>
+              <div>
+                <input type="radio" name="payment" id="master-card" value="master-card" />
+                <label for="master-card" class="master-card"
+                  ><img src="images/icons/MasterCard.png" alt="Master Card"
+                /></label>
+              </div>
+              <div>
+                <input type="radio" name="payment" id="paypal" value="paypal" />
+                <label for="paypal" class="paypal"><img src="images/icons/PayPal.png" alt="PayPal" /></label>
+              </div>
+              <div>
+                <input type="radio" name="payment" id="payu" value="payu" />
+                <label for="payu" class="payu"><img src="images/icons/PayU.png" alt="PayU" /></label>
+              </div>
+            </div>
+          </div>
+          <div class="info">* Required fields</div>
+          <div>
+            <input type="submit" value="Buy now" class="cta"/>
           </div>
         </form>
 
-        <form method="post" class="payment">
-          <h2>Payment method</h2>
-          <div class="payment-method">
-            <div>
-              <input type="radio" name="payment" id="visa" value="visa" />
-              <label for="visa" class="visa"><img src="images/icons/Visa.png" alt="Visa" /></label>
-            </div>
-            <div>
-              <input type="radio" name="payment" id="master-card" value="master-card" />
-              <label for="master-card" class="master-card"
-                ><img src="images/icons/MasterCard.png" alt="Master Card"
-              /></label>
-            </div>
-            <div>
-              <input type="radio" name="payment" id="paypal" value="paypal" />
-              <label for="paypal" class="paypal"><img src="images/icons/PayPal.png" alt="PayPal" /></label>
-            </div>
-            <div>
-              <input type="radio" name="payment" id="payu" value="payu" />
-              <label for="payu" class="payu"><img src="images/icons/PayU.png" alt="PayU" /></label>
-            </div>
-          </div>
-        </form>
-
-        <a href="jackets.html" class="cta">Continue shopping</a>
-        <a href="checkoutPartTwo.html" class="cta">Buy now</a>
       </section>
-
       <a href="#" class="back-to-top"
         ><img src="images/icons/Caret-up.svg" alt="back to top button" />
         <p>Back to top</p></a

@@ -566,7 +566,7 @@ footer div {
   background-color: var(--white-gray);
   color: var(--black-blue);
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 50px;
   margin-bottom: 50px;
   padding: 20px;
@@ -604,6 +604,15 @@ footer div {
   width: 30px;
 }
 
+.total-price {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.total-price h4 {
+  margin-right: 10px;
+}
+
 .adjust-products {
   display: flex;
   flex-direction: row;
@@ -619,9 +628,12 @@ footer div {
   border-bottom: solid 3px;
 }
 
+.shipping {
+  grid-column: 1/3;
+}
 .shipping-fields {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 10px;
 }
 
@@ -634,9 +646,7 @@ footer div {
   cursor: pointer;
 }
 
-.shipping-fields-adress {
-  grid-column: 1 / 3;
-}
+
 .shipping input {
   width: 100%;
 }
@@ -760,6 +770,7 @@ footer div {
     justify-self: center;
     width: 70%;
   }
+  
   .shipping,
   .payment {
     grid-column: 1 / 3;
