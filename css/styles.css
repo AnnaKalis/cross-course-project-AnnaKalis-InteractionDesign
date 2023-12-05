@@ -330,8 +330,9 @@ footer div {
   color: var(--blue-green);
   position: absolute;
   top:3%;
-  right:1%;
+  left:3%;
   padding:3px;
+  border-radius: 4px;
 }
 
 /* Styling of single product page
