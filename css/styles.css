@@ -377,6 +377,16 @@ footer div {
   text-decoration: underline;
  }
 
+ .back-button{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+ }
+ .back-button img{
+   height:40px;
+ }
+
+
 .add-to-cart-button{
   grid-row: 2/3;
 }
