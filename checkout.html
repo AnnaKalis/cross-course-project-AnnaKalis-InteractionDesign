@@ -88,29 +88,40 @@
               <label for="country">Country *</label>
               <input type="text" name="country" id="country" placeholder="Norway" required />
             </div>
-            <p>Choose a payment method *</p>
-            <div class="payment-method">
-              <div>
-                <input type="radio" name="payment" id="visa" value="visa" />
-                <label for="visa" class="visa"><img src="images/icons/Visa.png" alt="Visa" /></label>
+            <p></p>
+            <fieldset>
+              <legend>Choose a payment method *</legend>
+              <div class="payment-method">
+                <div>
+                  <input
+                    type="radio"
+                    name="payment"
+                    id="visa"
+                    value="visa"
+                    required
+                  />
+                  <label for="visa" class="visa"><img src="images/icons/Visa.png" alt="Visa" /></label>
+                </div>
+                <div>
+                  <input type="radio" name="payment" id="master-card" value="master-card" required />
+                  <label for="master-card" class="master-card"
+                    ><img src="images/icons/MasterCard.png" alt="Master Card"
+                  /></label>
+                </div>
+                <div>
+                  <input type="radio" name="payment" id="paypal" value="paypal" required />
+                  <label for="paypal" class="paypal"
+                    ><img src="images/icons/PayPal.png" alt="PayPal"
+                  /></label>
+                </div>
+                <div>
+                  <input type="radio" name="payment" id="payu" value="payu" required />
+                  <label for="payu" class="payu"><img src="images/icons/PayU.png" alt="PayU" /></label>
+                </div>
               </div>
-              <div>
-                <input type="radio" name="payment" id="master-card" value="master-card" />
-                <label for="master-card" class="master-card"
-                  ><img src="images/icons/MasterCard.png" alt="Master Card"
-                /></label>
-              </div>
-              <div>
-                <input type="radio" name="payment" id="paypal" value="paypal" />
-                <label for="paypal" class="paypal"><img src="images/icons/PayPal.png" alt="PayPal" /></label>
-              </div>
-              <div>
-                <input type="radio" name="payment" id="payu" value="payu" />
-                <label for="payu" class="payu"><img src="images/icons/PayU.png" alt="PayU" /></label>
-              </div>
-            </div>
+            </fieldset>
           </div>
-          <div class="info">* Required fields</div>
+          <small>* Required fields</small>
           <div>
             <input type="submit" value="Buy now" class="cta" />
           </div>
